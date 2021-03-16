@@ -43,8 +43,8 @@ public class Test {
         sha256_HMAC.init(secret_key);
 
         byte[] hash =sha256_HMAC.doFinal(content.getBytes());// 重点
-
-        System.out.println(byte2hex(hash));
+        System.out.println("3.2.5".replaceAll("\\.",""));
+        //System.out.println(byte2hex(hash));
     }
     public static String byte2hex(byte[] b)
     {

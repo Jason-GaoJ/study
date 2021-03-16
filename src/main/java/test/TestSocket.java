@@ -1,12 +1,8 @@
 package test;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-
 import java.io.IOException;
-import java.math.BigDecimal;
+import java.io.OutputStream;
 import java.net.Socket;
-import java.util.Date;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -60,8 +56,11 @@ public class TestSocket {
         return str;
     }
 
-    public static void main(String args[]) {
-        System.out.println("邀请码:" + toSerialNumber(1));
+    public static void main(String args[]) throws IOException {
+        Socket socket=new Socket("10.10.69.40", 51566);
+        OutputStream outputStream=socket.getOutputStream();
+        outputStream.write("11111111111111".getBytes());
+        outputStream.flush();
     }
 
 }
